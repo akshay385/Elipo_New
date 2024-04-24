@@ -44,7 +44,7 @@ entity inv_assg
 
 entity item_data_for_invassign
 {
-    key id : UUID;
+    key id : String;
     key invoice : String;
      Item : String;
     Item_No : String;
@@ -74,7 +74,7 @@ entity asgn_inv_to
 
 entity comments_temp
 {
-    key id : UUID;
+    key id : String;
     sr_no : String;
     comments_title : String;
     comments_desc : String;
@@ -122,7 +122,7 @@ entity track_invoices
 
 entity item_data_for_track
 {
-    key id : UUID;
+    key id : String;
     key invoice : String;
     Item : String;
     Item_No : String;
@@ -192,7 +192,7 @@ entity New
 
 entity item_new
 {
-    key id : UUID;
+    key id : String;
     key invoice : String;
     Item : String;
     Item_No : String;
@@ -258,7 +258,7 @@ entity Draft
 
 entity item2
 {
-    key id : UUID;
+    key id : String;
         key invoice : String;
         item_no : String;
     // Ref_invoice_no : String(20);
@@ -285,7 +285,7 @@ entity Rejected
 {
    key invoice_no : String;
     Ref_invoice_no : String;
-    supplier_name : String default 'NA';
+    supplier_name : String;
     Date : String;
     modified_by : String;
     modified_date_time : String;
@@ -317,7 +317,7 @@ entity Rejected
     discount_per : String;
     total_discount_amount : String;
     vat_per : String;
-    value1 : Boolean default false;
+    value1 : Boolean;
     value : Integer;
     file_link : LargeString;
     // draf : Association to many invoice_for_draft on draf.draft_data = $self;
@@ -327,7 +327,7 @@ entity Rejected
 
 entity item3
 {
-    key id : UUID;
+    key id : String;
         key invoice : String;
         item_no : String;
     // Ref_invoice_no : String;
@@ -397,7 +397,7 @@ entity inapproval
 
 entity Approver_tab
 {
-    key id:UUID;
+    key id:String;
     invoice : String;
     Approver : String;
    app : Association to one inapproval on app.invoice = invoice;   
@@ -406,7 +406,7 @@ entity Approver_tab
 
 entity item4
 {
-    key id : UUID;
+    key id : String;
         key invoice : String;
         item_no : String;
     // Ref_invoice_no : String(20);
@@ -470,7 +470,7 @@ entity Submitted_to_ERP {
 
 entity erp_app_tab
 {
-    key id:UUID;
+    key id:String;
     invoice : String;
     Approver : String;
    app1 : Association to one Submitted_to_ERP on app1.invoice = invoice;   
@@ -479,7 +479,7 @@ entity erp_app_tab
 
 entity item5
 {
-    key id : UUID;
+    key id : String;
         key invoice : String;
         item_no : String;
     // Ref_invoice_no : String(20);
@@ -596,7 +596,7 @@ entity attachments : cuid, managed{
 
 entity history
 {
-    key id : UUID;
+    key id : String;
     img : String @UI.IsImageURL;
    Enquiry_no : String;
     Comments : String;

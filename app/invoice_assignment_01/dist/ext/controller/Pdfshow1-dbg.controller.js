@@ -18,31 +18,31 @@ sap.ui.define(['sap/ui/core/mvc/ControllerExtension','sap/ui/model/json/JSONMode
 				   var oView = this.getView();
 					   const
 					   oExtensionAPI = this.base.getExtensionAPI(),
-					   oModel = oExtensionAPI.getModel(),
-					   sFunctionName = "getPdfUrl",
-					   oFunction = oModel.bindContext(`/${sFunctionName}(...)`);
-					   // oBookingTableAPI = oExtensionAPI.byId("fe::CustomSubSection::Bookings--OwnBookingsTable"),
-					   // oWarningMessage = new Message({
-					   //   type: MessageType.Warning,
-					   //   message: await oExtensionAPI.getModel("i18n").getResourceBundle().getText("bookingsNew")
-					   // }),
-					   //   oInfoMessage = new Message({
-					   // 	type: MessageType.Info,
-					   // 	message: await oExtensionAPI.getModel("i18n").getResourceBundle().getText("bookingsAttention")
-					   //   });
-						 // Request OData function with current CustomerID
-					   //   const oCustomer = await oBindingContext.requestObject(oBindingContext.getPath());
-					   //   oFunction.setParameter("CustomerID", oCustomer.CustomerID);
-						 await oFunction.execute();
-						 var oContext = oFunction.getBoundContext();
+					   oModel = oExtensionAPI.getModel()
+					//    sFunctionName = "getPdfUrl",
+					//    oFunction = oModel.bindContext(`/${sFunctionName}(...)`);
+					//    // oBookingTableAPI = oExtensionAPI.byId("fe::CustomSubSection::Bookings--OwnBookingsTable"),
+					//    // oWarningMessage = new Message({
+					//    //   type: MessageType.Warning,
+					//    //   message: await oExtensionAPI.getModel("i18n").getResourceBundle().getText("bookingsNew")
+					//    // }),
+					//    //   oInfoMessage = new Message({
+					//    // 	type: MessageType.Info,
+					//    // 	message: await oExtensionAPI.getModel("i18n").getResourceBundle().getText("bookingsAttention")
+					//    //   });
+					// 	 // Request OData function with current CustomerID
+					//    //   const oCustomer = await oBindingContext.requestObject(oBindingContext.getPath());
+					//    //   oFunction.setParameter("CustomerID", oCustomer.CustomerID);
+					// 	 await oFunction.execute();
+					// 	 var oContext = oFunction.getBoundContext();
 						 
-						 var res = oContext.getObject();
-						 debugger
-						 await oFunction.execute();
-						 debugger
-						oContext = oFunction.getBoundContext();
+					// 	 var res = oContext.getObject();
+					// 	 debugger
+					// 	 await oFunction.execute();
+					// 	 debugger
+					// 	oContext = oFunction.getBoundContext();
 						 
-						  res = oContext.getObject();
+					// 	  res = oContext.getObject();
 						 ///////
 						 
 									 // let x = x1
@@ -51,8 +51,9 @@ sap.ui.define(['sap/ui/core/mvc/ControllerExtension','sap/ui/model/json/JSONMode
 									 // 	x = x.slice(1, -1);
 									 //   }
 									 /////
-								   res = res.value.file_link;
-									 console.log(res);debugger
+								//    res = res.value.file_link;
+								// 	 console.log(res);debugger
+								var res = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
 									 var oModel1 = new JSONModel({ 
 										 pdfUrl : res    
 											 });
